@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mnghunda Finance | Simple, fair loans</title>
+    <meta name="description" content="Simple, fair personal loans with clear terms and friendly service.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root{--bg:#faf6ef;--card:#f3e3c8;--text:#1a1d26;--muted:#5a5f6b;--line:#e3cfa9;--accent:#f28c28;--accent2:#b85c00;--chip:#fde7c9;--dark:#14171f}
+        @media (prefers-color-scheme:dark){:root{--bg:#101319;--card:#1d222c;--text:#f1f3f6;--muted:#a3abb8;--line:#2d3441;--accent:#f5a54a;--accent2:#f5a54a;--chip:#3a2a14;--dark:#0b0d12}}
+        *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+        body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 "Inter",system-ui,sans-serif}
+        h1,h2,h3,.bar b{font-family:"Poppins","Inter",sans-serif}
+        a{color:var(--accent2)}
+        .bar{position:sticky;top:0;z-index:5;background:var(--dark);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:12px 24px;flex-wrap:wrap;gap:8px}
+        .bar b{font-size:19px;letter-spacing:.3px}.bar b::first-letter{color:var(--accent)}
+        .bar nav{display:flex;gap:18px;flex-wrap:wrap;align-items:center}.bar a{color:#fff;text-decoration:none;font-size:14px;opacity:.85}.bar a:hover{opacity:1;color:var(--accent)}
+        .bar a.cta{background:var(--accent);color:#14171f;font-weight:600;padding:7px 14px;border-radius:99px;opacity:1}.bar a.cta:hover{color:#14171f;filter:brightness(1.08)}
+        .hero{background:linear-gradient(135deg,#14171f 0%,#2b1c0b 100%);color:#fff;text-align:center;padding:88px 20px 96px;border-radius:0 0 40px 40px;position:relative;overflow:hidden}
+        .hero::before{content:"";position:absolute;inset:0;opacity:.07;background:repeating-linear-gradient(45deg,#f28c28 0 14px,transparent 14px 28px)}
+        .hero>*{position:relative}
+        .hero h1{margin:0 0 14px;font-size:clamp(30px,5.5vw,50px);font-weight:800;line-height:1.15}
+        .hero p{margin:0 auto 28px;max-width:560px;opacity:.9;font-size:17px}
+        .btn{display:inline-block;background:var(--accent);color:#14171f;font-weight:600;border:0;border-radius:99px;padding:12px 24px;font:inherit;font-weight:600;text-decoration:none;cursor:pointer}
+        .btn:hover{filter:brightness(1.08)}
+        .btn.alt{background:transparent;border:2px solid #fff;color:#fff;margin-left:8px}
+        section{max-width:960px;margin:0 auto;padding:48px 20px}
+        h2{font-size:26px;margin:0 0 6px;color:var(--text)}h2::after{content:"";display:block;width:46px;height:4px;border-radius:2px;background:var(--accent);margin-top:6px}
+        .lead{color:var(--muted);margin:10px 0 22px}
+        #about p{font-size:14.5px;line-height:1.7;max-width:640px}
+        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+        .card{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:16px;padding:20px}
+        .grid .card{transition:background .2s,transform .2s}
+        .grid .card:hover{background:#ecd3a8;transform:translateY(-4px)}
+        @media (prefers-color-scheme:dark){.grid .card:hover{background:#2a303d}}
+        .card h3{margin:0 0 6px;font-size:17px}.card p{margin:0;color:var(--muted);font-size:15px}
+        .num{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--accent);color:#14171f;font-weight:700;margin-bottom:8px}
+        .hours{width:100%;border-collapse:collapse}.hours td{padding:10px 4px;border-bottom:1px solid var(--line)}.hours td:last-child{text-align:right;font-weight:600}
+        form{display:grid;gap:10px}label{font-size:13px;color:var(--muted);display:block}
+        input{width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--text);font:inherit}
+        .row3{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+        .res{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:12px}.res div{background:var(--bg);border-radius:10px;padding:10px}.res small{color:var(--muted);display:block}.res b{font-size:18px}
+        .note{background:var(--chip);color:var(--accent2);padding:10px 12px;border-radius:10px;font-size:14px;margin-top:10px;display:none}
+        .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+        footer{background:var(--dark);color:#b9c0cc;text-align:center;padding:28px 20px;font-size:13px}
+    </style>
+</head>
+<body>
+<div class="bar"><b>Mnghunda Finance</b>
+    <nav><a href="#about">About</a><a href="#why">Why us</a><a href="#how">How it works</a><a href="#calculator">Calculator</a><a href="#hours">Hours</a><a href="#contact">Contact</a><a href="#login">Login</a><a class="cta" href="#signup">Create account</a></nav></div>
+
+<div class="hero">
+    <h1>Simple, fair loans when you need them</h1>
+    <p>Clear terms, quick decisions and friendly service. Work out what a loan will cost you, then apply online.</p>
+    <a class="btn" href="#signup">Create account</a><a class="btn alt" href="#calculator">Try the calculator</a>
+</div>
+
+<section id="about">
+    <h2>About us</h2>
+    <p class="lead">A lender you can talk to.</p>
+    <p>Mnghunda Finance is a Community-based lender based in Giyani, Gauteng and Mpumalanga. We started with a simple idea: borrowing money should be clear, fair and respectful.</p>
+    <p>We know that life doesn't always line up with payday. Whether you're covering school fees, a medical bill, a repair or a small business need, we're here to help you bridge the gap with a loan that makes sense for you.</p>
+    <p>When you borrow with us, you always see what you will pay back before you agree. There are no surprises and no confusing jargon. Every application is reviewed by a real person, and we take the time to understand your situation.</p>
+    <p>We keep your information private and use your documents only to assess your application. Please ask us any question before you commit.</p>
+    <p><i>Borrow with confidence. Repay with ease.</i></p>
+</section>
+
+<section id="why" style="padding-top:0">
+    <h2>Why choose us</h2>
+    <p class="lead">What you can expect when you borrow with us.</p>
+    <div class="grid">
+        <div class="card"><h3>Clear terms</h3><p>You see the interest and the total to repay up front, before you commit.</p></div>
+        <div class="card"><h3>Quick decisions</h3><p>Apply online and hear back from us without queues or long paperwork.</p></div>
+        <div class="card"><h3>Personal service</h3><p>You deal with people, not a call centre. Ask us anything.</p></div>
+        <div class="card"><h3>Your privacy matters</h3><p>Your documents are only used to assess your application.</p></div>
+    </div>
+</section>
+
+<section id="how" style="padding-top:0">
+    <h2>How it works</h2>
+    <p class="lead">Four simple steps.</p>
+    <div class="grid">
+        <div class="card"><span class="num">1</span><h3>Create an account</h3><p>Register and upload your ID, proof of address and proof of income.</p></div>
+        <div class="card"><span class="num">2</span><h3>Get approved</h3><p>We review your documents and approve your profile.</p></div>
+        <div class="card"><span class="num">3</span><h3>Apply</h3><p>Choose the amount and how long you need to repay.</p></div>
+        <div class="card"><span class="num">4</span><h3>Repay</h3><p>Track your balance and payments in your account.</p></div>
+    </div>
+</section>
+
+<section id="calculator" style="padding-top:0">
+    <h2>Loan calculator</h2>
+    <p class="lead">Estimate what a loan will cost.</p>
+    <div class="card">
+        <div class="row3">
+            <div><label>Amount (R)</label><input id="ca" type="number" min="1" value="1000"></div>
+            <div><label>Interest per month (%)</label><input id="cr" type="number" min="0" step="any" value="10"></div>
+            <div><label>Months to repay</label><input id="cm" type="number" min="1" value="3"></div>
+        </div>
+        <div class="res" id="cres"></div>
+        <p style="color:var(--muted);font-size:13px;margin:10px 0 0">An estimate only. The final rate is confirmed when your loan is approved.</p>
+    </div>
+</section>
+
+<section id="hours" style="padding-top:0">
+    <h2>Opening times</h2>
+    <p class="lead">When you can reach us.</p>
+    <div class="card"><table class="hours">
+        <tr><td>Monday to Friday</td><td>08:00 – 17:00</td></tr>
+        <tr><td>Saturday</td><td>08:00 – 13:00</td></tr>
+        <tr><td>Sunday and public holidays</td><td>Closed</td></tr>
+    </table>
+        <p style="color:var(--muted);font-size:13px;margin:10px 0 0">Online applications can be submitted at any time.</p></div>
+</section>
+
+<section id="contact" style="padding-top:0">
+    <h2>Contact us</h2>
+    <p class="lead">We would love to hear from you.</p>
+    <div class="card"><p>Phone: +27 50 202 5650<br>Email: mnghundafinance.co.za<br>Address: 584 Amarillis Street - Pretoria</p></div>
+</section>
+
+<section id="account" style="padding-top:0">
+    <div class="two">
+        <div class="card" id="login"><h2 style="font-size:20px">Login</h2>
+            <form onsubmit="soon(event,'m1')"><div><label>Email</label><input type="email" required></div><div><label>Password</label><input type="password" required></div><button class="btn">Sign in</button></form>
+            <div class="note" id="m1">Online accounts are not switched on yet. Please check back soon.</div></div>
+        <div class="card" id="signup"><h2 style="font-size:20px">Create account</h2>
+            <form onsubmit="soon(event,'m2')"><div><label>Full name</label><input required></div><div><label>Email</label><input type="email" required></div><div><label>Phone</label><input required></div><div><label>Password</label><input type="password" minlength="8" required></div><button class="btn">Create account</button></form>
+            <div class="note" id="m2">Online accounts are not switched on yet. Please check back soon.</div></div>
+    </div>
+</section>
+
+<footer>
+    <div>&copy; <span id="yr"></span> Mnghunda Finance. All rights reserved.</div>
+    <div>Registered credit provider: NCRCP[regoistration to be added soon]</div>
+</footer>
+
+<script>
+    function R(n){return "R"+Number(n).toLocaleString("en-ZA",{maximumFractionDigits:2})}
+    function calc(){var a=+document.getElementById("ca").value||0,r=+document.getElementById("cr").value||0,m=Math.max(1,+document.getElementById("cm").value||1),t=a+a*r/100*m;
+        document.getElementById("cres").innerHTML='<div><small>Interest</small><b>'+R(t-a)+'</b></div><div><small>Total to repay</small><b>'+R(t)+'</b></div><div><small>Per month</small><b>'+R(t/m)+'</b></div>'}
+    ["ca","cr","cm"].forEach(function(i){document.getElementById(i).oninput=calc});calc();
+    function soon(e,id){e.preventDefault();document.getElementById(id).style.display="block"}
+    document.getElementById("yr").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>

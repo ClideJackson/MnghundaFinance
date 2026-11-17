@@ -1,0 +1,77 @@
+{
+ "users": [
+  {
+   "id": "9a785bb5fb48",
+   "role": "lender",
+   "name": "Lender",
+   "email": "jackymashimbhy@gmail.com",
+   "hash": "$2b$10$JFX48NghTKda6KbDpCexr.9YRVyvBQR8b41K3papXgAYW13naHE76"
+  },
+  {
+   "id": "825b8cd3fad9",
+   "role": "borrower",
+   "name": "Cliven Hlongo",
+   "email": "royalprinceonr263@gmail.com",
+   "phone": "0810020325",
+   "hash": "$2b$10$gnBVuthHij4Fev0GtUIa7e69v3QhHSFU7YqoZaUc7B13i2rOOOzai",
+   "status": "approved",
+   "created": 1794906221790,
+   "docs": [
+    {
+     "label": "ID or passport",
+     "file": "c70a6d723a2b8271afc1519f.jpeg"
+    },
+    {
+     "label": "Proof of address",
+     "file": "1146d0f200f9cd6764388138.jpeg"
+    },
+    {
+     "label": "Proof of income",
+     "file": "9ffed1c467a4800f65465aab.jpeg"
+    }
+   ]
+  },
+  {
+   "id": "a37710aec82d",
+   "role": "borrower",
+   "name": "Cliven Hlongo",
+   "email": "royalprinceone263@gmail.com",
+   "phone": "0810020325",
+   "hash": "$2b$10$OcBt/row4N2TZiBr1X/6qezv05LQsxqUBCtOz9IW9TnlO/RQrhaOm",
+   "status": "approved",
+   "created": 1794906409855,
+   "docs": [
+    {
+     "label": "ID or passport",
+     "file": "5b64e516c0772959552dc6df.jpeg"
+    },
+    {
+     "label": "Proof of address",
+     "file": "170627fcf32d31762e5465c5.jpeg"
+    },
+    {
+     "label": "Proof of income",
+     "file": "5133c9344b764e1961b34aa4.jpeg"
+    }
+   ]
+  }
+ ],
+ "loans": [
+  {
+   "id": "143f075f6bb7",
+   "userId": "a37710aec82d",
+   "amt": 1500,
+   "months": 3,
+   "purpose": "",
+   "date": "2026-11-17",
+   "status": "approved",
+   "rate": 35,
+   "pays": [
+    {
+     "v": 500,
+     "d": "2026-11-17"
+    }
+   ]
+  }
+ ]
+}
